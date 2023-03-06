@@ -1,24 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VCz-pL-JbO">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Çalışanlar-->
+        <scene sceneID="XOH-Tt-dz8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="Hyo-KY-3qR" customClass="CalisanlarViewController" customModule="CompanyRealm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4q-hv-biZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-Sv-HmQ">
+                                <rect key="frame" x="47" y="59" width="299" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Swift"/>
+                                    <segment title="Android"/>
+                                    <segment title="Designer"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wXH-l8-sEX">
+                                <rect key="frame" x="0.0" y="110" width="393" height="659"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="qhg-r4-PsR">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qhg-r4-PsR" id="lhW-qN-JbM">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aEO-0a-52N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aYF-Sv-HmQ" firstAttribute="top" secondItem="aEO-0a-52N" secondAttribute="top" id="89s-dq-yqU"/>
+                            <constraint firstItem="aEO-0a-52N" firstAttribute="bottom" secondItem="wXH-l8-sEX" secondAttribute="bottom" id="Bhn-ie-PTN"/>
+                            <constraint firstItem="wXH-l8-sEX" firstAttribute="top" secondItem="aYF-Sv-HmQ" secondAttribute="bottom" constant="20" id="kdf-aZ-MW0"/>
+                            <constraint firstItem="aYF-Sv-HmQ" firstAttribute="centerX" secondItem="o4q-hv-biZ" secondAttribute="centerX" id="nWg-VD-XLL"/>
+                            <constraint firstItem="aEO-0a-52N" firstAttribute="trailing" secondItem="wXH-l8-sEX" secondAttribute="trailing" id="v6q-8Q-nKt"/>
+                            <constraint firstItem="wXH-l8-sEX" firstAttribute="leading" secondItem="aEO-0a-52N" secondAttribute="leading" id="xZx-3e-geU"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Çalışanlar" image="person.2.fill" catalog="system" id="8JB-4a-Z3d"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="aYF-Sv-HmQ" id="Hqv-81-IHm"/>
+                        <outlet property="tableView" destination="wXH-l8-sEX" id="5qO-0u-dGb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4u-wD-IxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-324.4274809160305" y="-488.02816901408454"/>
+        </scene>
+        <!--Mühendis Ekle-->
+        <scene sceneID="7Rt-gh-bsU">
+            <objects>
+                <viewController id="uVe-Qx-33J" customClass="EkleViewController" customModule="CompanyRealm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lQK-4p-1Ih">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RBY-9h-V9Q">
+                                <rect key="frame" x="24.333333333333343" y="271" width="344.33333333333326" height="310.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-A6-dja">
+                                        <rect key="frame" x="10" y="0.0" width="324.33333333333331" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-Soyad :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN2-dE-qXF">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NHb-cU-5dG">
+                                                <rect key="frame" x="124.33333333333331" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="vFW-pZ-P5s"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jOv-3v-aq0">
+                                        <rect key="frame" x="0.0" y="74" width="344.33333333333331" height="162"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bölüm :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq6-ZH-8SU">
+                                                <rect key="frame" x="0.0" y="70.666666666666686" width="57.333333333333336" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awr-9u-AHq">
+                                                <rect key="frame" x="77.333333333333343" y="0.0" width="267" height="162"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="267" id="4U2-mb-FVc"/>
+                                                    <constraint firstAttribute="height" constant="162" id="NQO-5g-o4g"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nd-dH-GS5">
+                                        <rect key="frame" x="122.33333333333331" y="276" width="100" height="34.333333333333314"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="4li-pc-VtY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Ekle" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="addTapped:" destination="uVe-Qx-33J" eventType="touchUpInside" id="q5W-8q-Rwf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ue5-dP-xAr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RBY-9h-V9Q" firstAttribute="centerX" secondItem="lQK-4p-1Ih" secondAttribute="centerX" id="4Qi-Nn-ALP"/>
+                            <constraint firstItem="RBY-9h-V9Q" firstAttribute="centerY" secondItem="lQK-4p-1Ih" secondAttribute="centerY" id="kxT-oA-lxR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mühendis Ekle" image="plus" catalog="system" id="CxS-wM-Pxh"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="NHb-cU-5dG" id="8XF-Iv-ey2"/>
+                        <outlet property="rollPickerView" destination="awr-9u-AHq" id="vkl-nC-A3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dp-uP-6gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-324.4274809160305" y="357.74647887323948"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VUy-NP-JOn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VCz-pL-JbO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jP5-uF-pUN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hyo-KY-3qR" kind="relationship" relationship="viewControllers" id="kCz-60-eZm"/>
+                        <segue destination="uVe-Qx-33J" kind="relationship" relationship="viewControllers" id="Ocz-tw-P1b"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3o-u9-oAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1433" y="-63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.2.fill" catalog="system" width="128" height="81"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

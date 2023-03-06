@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		3A21AFB629B3465400D00B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21AFB529B3465400D00B88 /* AppDelegate.swift */; };
 		3A21AFB829B3465400D00B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21AFB729B3465400D00B88 /* SceneDelegate.swift */; };
-		3A21AFBA29B3465400D00B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A21AFB929B3465400D00B88 /* ViewController.swift */; };
 		3A21AFBD29B3465400D00B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A21AFBB29B3465400D00B88 /* Main.storyboard */; };
 		3A21AFBF29B3465500D00B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A21AFBE29B3465500D00B88 /* Assets.xcassets */; };
 		3A21AFC229B3465500D00B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A21AFC029B3465500D00B88 /* LaunchScreen.storyboard */; };
+		3A7E248129B4B44800EFE7C9 /* CalisanlarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7E248029B4B44800EFE7C9 /* CalisanlarModel.swift */; };
+		3A8F56BA29B34B06006233EB /* CalisanlarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F56B929B34B06006233EB /* CalisanlarViewController.swift */; };
+		3A8F56BC29B34B3F006233EB /* EkleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F56BB29B34B3F006233EB /* EkleViewController.swift */; };
 		C8457D17317FED4C90FE49DA /* Pods_CompanyRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34240024F3F8795F87929CA /* Pods_CompanyRealm.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +22,13 @@
 		3A21AFB229B3465400D00B88 /* CompanyRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A21AFB529B3465400D00B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A21AFB729B3465400D00B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A21AFB929B3465400D00B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A21AFBC29B3465400D00B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A21AFBE29B3465500D00B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A21AFC129B3465500D00B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A21AFC329B3465500D00B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A7E248029B4B44800EFE7C9 /* CalisanlarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalisanlarModel.swift; sourceTree = "<group>"; };
+		3A8F56B929B34B06006233EB /* CalisanlarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalisanlarViewController.swift; sourceTree = "<group>"; };
+		3A8F56BB29B34B3F006233EB /* EkleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EkleViewController.swift; sourceTree = "<group>"; };
 		7B820A712CDC1A16409C10E7 /* Pods-CompanyRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyRealm.debug.xcconfig"; path = "Target Support Files/Pods-CompanyRealm/Pods-CompanyRealm.debug.xcconfig"; sourceTree = "<group>"; };
 		8514141D1636EF14F975EE5A /* Pods-CompanyRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyRealm.release.xcconfig"; path = "Target Support Files/Pods-CompanyRealm/Pods-CompanyRealm.release.xcconfig"; sourceTree = "<group>"; };
 		D34240024F3F8795F87929CA /* Pods_CompanyRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompanyRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,11 +77,13 @@
 			children = (
 				3A21AFB529B3465400D00B88 /* AppDelegate.swift */,
 				3A21AFB729B3465400D00B88 /* SceneDelegate.swift */,
-				3A21AFB929B3465400D00B88 /* ViewController.swift */,
 				3A21AFBB29B3465400D00B88 /* Main.storyboard */,
 				3A21AFBE29B3465500D00B88 /* Assets.xcassets */,
 				3A21AFC029B3465500D00B88 /* LaunchScreen.storyboard */,
 				3A21AFC329B3465500D00B88 /* Info.plist */,
+				3A8F56B929B34B06006233EB /* CalisanlarViewController.swift */,
+				3A8F56BB29B34B3F006233EB /* EkleViewController.swift */,
+				3A7E248029B4B44800EFE7C9 /* CalisanlarModel.swift */,
 			);
 			path = CompanyRealm;
 			sourceTree = "<group>";
@@ -88,7 +94,6 @@
 				7B820A712CDC1A16409C10E7 /* Pods-CompanyRealm.debug.xcconfig */,
 				8514141D1636EF14F975EE5A /* Pods-CompanyRealm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A21AFBA29B3465400D00B88 /* ViewController.swift in Sources */,
+				3A7E248129B4B44800EFE7C9 /* CalisanlarModel.swift in Sources */,
 				3A21AFB629B3465400D00B88 /* AppDelegate.swift in Sources */,
 				3A21AFB829B3465400D00B88 /* SceneDelegate.swift in Sources */,
+				3A8F56BA29B34B06006233EB /* CalisanlarViewController.swift in Sources */,
+				3A8F56BC29B34B3F006233EB /* EkleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
