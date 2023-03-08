@@ -13,29 +13,58 @@ class CalisanlarViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var calisanlar = [CalisanlarModel]()
+    var calisanlar :Results<CalisanlarModel>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        callRealm()
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
+        segmentedControl.addTarget(self, action: #selector(segmentChanged) , for: .valueChanged)
+        predicateCalisanlar(role: "")
+        tableView.reloadData()
+
+
         tableView.delegate   = self
         tableView.dataSource = self
     }
     
+    @objc func segmentChanged(){
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            predicateCalisanlar(role: "")
+        case 1:
+            predicateCalisanlar(role: "Swift")
+        case 2:
+            predicateCalisanlar(role: "Android")
+        case 3:
+            predicateCalisanlar(role: "Designer")
+
+        default:
+            predicateCalisanlar(role: "")
+        }
+    }
+    
+    func predicateCalisanlar(role:String){
+        
+        let realm = try! Realm()
+        if role == ""{
+            calisanlar = realm.objects(CalisanlarModel.self)
+        }else{
+            calisanlar = realm.objects(CalisanlarModel.self).filter("role = %@", role)
+
+        }
+        
+        tableView.reloadData()
+    }
     
     func callRealm() {
         
         do {
             let realm = try Realm()
             
-          let data = realm.object(ofType: CalisanlarModel.self, forPrimaryKey: "ED13EA0E-EE54-4238-BC85-ECD57BDA403D")
-            if let data = data {
-                calisanlar.append(data)
-                tableView.reloadData()
-            }
+            tableView.reloadData()
 
         } catch {
             
@@ -45,13 +74,17 @@ class CalisanlarViewController: UIViewController {
 }
 extension CalisanlarViewController :UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return calisanlar.count
+        return calisanlar == nil ? 0 : calisanlar!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = calisanlar[indexPath.row].name
+        
+        if calisanlar != nil {
+            cell.textLabel?.text = calisanlar![indexPath.row].name
+
+        }
 
         return cell
         
